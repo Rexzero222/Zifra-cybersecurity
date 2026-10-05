@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛡️ ЦИФРА — Памятка по кибербезопасности и финансовой грамотности
 
 Интерактивный веб-сервис с практической базой знаний, пошаговыми алгоритмами действий при киберугрозах и финансовом мошенничестве, а также встроенным чек-листом цифровой безопасности.
@@ -34,3 +35,25 @@
 ├── .babelrc          # Конфигурация Babel (Preset React)
 ├── package.json      # Зависимости и npm-скрипты
 └── README.md         # Документация проекта
+=======
+Локальный запуск и сборка
+1. Клонирование репозитория
+Bash
+git clone [https://github.com/Rexzero222/Zifra-cybersecurity.git](https://github.com/Rexzero222/Zifra-cybersecurity.git)
+cd Zifra-cybersecurity
+
+Установка зависимостей
+Bash
+npm install
+
+Компиляция изменений (app.js ➔ app.bundle.js)
+После внесения изменений в файл app.js выполните сборку:
+
+Bash
+npm run build
+
+Или через npx (если не настроены скрипты в package.json):
+
+Bash
+npx babel app.js --out-file app.bundle.js
+>>>>>>> ff827ceac7907d7b778a47970558ff79b4d39dce
