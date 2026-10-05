@@ -106,3 +106,113 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255, 25
   outline: 2px solid var(--primary-pink);
   border-radius: 12px;
 }
+/* ==========================================
+   Адаптация под мобильные устройства (Phones)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Ограничение ширины контейнера и отступы */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Шапка */
+  .header-content {
+    padding: 12px 0;
+  }
+
+  .brand img {
+    height: 36px;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.75rem;
+  }
+
+  /* Hero-секция */
+  .hero {
+    padding: 24px 0 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  /* Кнопки категорий — горизонтальная прокрутка для мобильных */
+  .controls-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .cat-btn {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* Сетка карточек в 1 колонку */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .step-item {
+    font-size: 0.9rem;
+  }
+
+  /* Чек-лист */
+  .checklist-section {
+    margin-top: 32px;
+    padding: 20px;
+  }
+
+  .checklist-title {
+    font-size: 1.3rem;
+  }
+
+  .checklist-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .check-item {
+    padding: 10px 12px;
+  }
+
+  .check-text {
+    font-size: 0.88rem;
+  }
+
+  /* Футер */
+  footer {
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.8rem;
+  }
+}
