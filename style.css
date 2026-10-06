@@ -118,6 +118,12 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255, 25
   /* Шапка */
   .header-content {
     padding: 12px 0;
+    justify-content: center;
+  }
+
+  .brand {
+    justify-content: center;
+    text-align: center;
   }
 
   .brand img {
@@ -147,23 +153,44 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255, 25
     margin-bottom: 20px;
   }
 
-  /* Кнопки категорий — горизонтальная прокрутка для мобильных */
+  /* Кнопки категорий — визуальный индикатор скролла */
   .controls-wrapper {
     margin-bottom: 24px;
+    padding: 12px;
+    position: relative;
+    /* Градиентные маски по краям затуманивают элементы, визуально указывая на прокрутку */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
   }
 
   .categories {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     overflow-x: auto;
-    padding-bottom: 8px;
+    padding: 4px 12px 10px 12px;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(236, 72, 153, 0.4) transparent;
+  }
+
+  .categories::-webkit-scrollbar {
+    height: 3px;
+    display: block;
+  }
+
+  .categories::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .categories::-webkit-scrollbar-thumb {
+    background: rgba(236, 72, 153, 0.4);
+    border-radius: 4px;
   }
 
   .cat-btn {
     flex: 0 0 auto;
-    scroll-snap-align: start;
     padding: 8px 14px;
     font-size: 0.85rem;
     white-space: nowrap;
